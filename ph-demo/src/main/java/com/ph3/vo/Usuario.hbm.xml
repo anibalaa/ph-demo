@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-may-2017 16:53:13 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class
+        name="com.ph3.vo.Usuario"
+        table="Usuario"
+        catalog="ph3"
+        optimistic-lock="version">
+        <id
+            name="idUsuario"
+            type="java.lang.Integer">
+            <column name="idUsuario" />
+            <generator class="identity" />
+        </id>
+        <property
+            name="usuarioNombre"
+            type="string">
+            <column
+                name="usuarioNombre"
+                length="45"
+                unique="true" />
+        </property>
+        <property
+            name="usuarioClave"
+            type="string">
+            <column
+                name="usuarioClave"
+                length="45" />
+        </property>
+        <set
+            name="usuarioRols"
+            table="UsuarioRol"
+            inverse="true"
+            lazy="true"
+            fetch="select">
+            <key>
+                <column name="idUsuario" />
+            </key>
+            <one-to-many class="com.ph3.vo.UsuarioRol" />
+        </set>
+    </class>
+</hibernate-mapping>

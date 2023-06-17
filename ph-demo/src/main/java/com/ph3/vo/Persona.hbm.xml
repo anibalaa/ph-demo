@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-may-2017 16:53:13 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+ <class name="com.ph3.vo.Persona" table="Persona" catalog="ph3" optimistic-lock="version">
+  <id name="idPersona" type="java.lang.Integer">
+   <column name="idPersona" />
+   <generator class="identity" />
+  </id>
+  <property name="nombre" type="string">
+   <column name="nombre" length="45" />
+  </property>
+  <property name="apellido1" type="string">
+   <column name="apellido1" length="45" />
+  </property>
+  <property name="apellido2" type="string">
+   <column name="apellido2" length="45" />
+  </property>
+  <property name="activo" type="string">
+   <column name="activo" length="1" />
+  </property>
+  <set name="recorridos" table="Recorrido" inverse="true" lazy="true" fetch="select">
+   <key>
+    <column name="idPersona" />
+   </key>
+   <one-to-many class="com.ph3.vo.Recorrido" />
+  </set>
+  <set name="rolPersonas" table="RolPersona" inverse="true" lazy="true" fetch="select">
+   <key>
+    <column name="idPersona" />
+   </key>
+   <one-to-many class="com.ph3.vo.RolPersona" />
+  </set>
+ </class>
+</hibernate-mapping>

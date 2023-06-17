@@ -1,0 +1,70 @@
+<%@ include file="/includes/include.jsp"%>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("select.fase").hide();
+        $("select.grupo").hide();
+        $("select.programa").change(function() {
+            var selectedPrograma = $(".programa option:selected").val();
+            if (selectedPrograma != " ") {
+                $("select.fase").show();
+                $("select.grupo").show();
+            } else {
+                alert("No hay fase seleccionada");
+            }
+        });
+
+    });
+</script>
+<body>
+    <h1>Fases Relacionadas Con Un Programa</h1>
+    <!-- Estas dos capas para comprimir la tabla y que no ocupe todo el ancho de la pantalla -->
+    <table>
+        <tr>
+            <th>idFase</th>
+            <th>Acción</th>
+        </tr>
+        <c:forEach items="${requestScope.listaDeProgramaFases}" var="ep">
+            <tr>
+                <td>${ep.getFase().getIdFase() }</td>
+                <td>
+                    <a href="EliminarProgramaFase.do?idProgramaFase=${ep.idProgramaFase }" onclick="return confirmar()">Eliminar</a>
+                    <a href="ModificarProgramaFase.do?idProgramaFase=${ep.idProgramaFase }">Modificar</a>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+    <table>
+        <tr>
+            <th>idPrograma</th>
+            <th>idFase</th>
+            <th>idGrupo</th>
+        </tr>
+        <tr>
+            <td>
+                <select name="programa" class="programa">
+                    <option value="" selected></option>
+                    <option value="${requestScope.idPrograma }">${requestScope.idPrograma }</option>
+                </select>
+            </td>
+            <td>
+                <select name="fase" class="fase">
+                    <option value="" selected></option>
+                    <c:forEach items="${requestScope.listaDeProgramaFases }" var="ep2">
+                        <option value="${ep2.getFase().getIdFase() }">${ep2.getFase().getIdFase() }</option>
+                    </c:forEach>
+                </select>
+            </td>
+            <td>
+                <select name="grupo" class="grupo">
+                    <option value="" selected></option>
+                    <c:forEach items="${requestScope.listaDeFaseGrupos }" var="ep3">
+                        <option value="${ep3.getGrupo().getIdGrupo() }">${ep3.getGrupo().getIdGrupo() }</option>
+                    </c:forEach>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <a href="protegido/admin/form/programafases/insertarProgramaFases.jsp">Insertar</a>
+    <%@ include file="/includes/pie.jsp"%>
+</body>
+</html>

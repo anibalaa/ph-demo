@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-may-2017 16:53:13 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+ <class name="com.ph3.vo.Motivo" table="Motivo" catalog="ph3" optimistic-lock="version">
+  <id name="idMotivo" type="java.lang.Integer">
+   <column name="idMotivo" />
+   <generator class="identity" />
+  </id>
+  <property name="descripcion" type="string">
+   <column name="descripcion" length="45" unique="true" />
+  </property>
+  <set name="recorridos" table="Recorrido" inverse="true" lazy="true" fetch="select">
+   <key>
+    <column name="idMotivo" />
+   </key>
+   <one-to-many class="com.ph3.vo.Recorrido" />
+  </set>
+ </class>
+</hibernate-mapping>

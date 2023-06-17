@@ -1,0 +1,133 @@
+<%@ include file="/includes/include.jsp"%>
+<!-- saco el código CSS a un archivo -->
+<link rel="stylesheet" type="text/css" href="includes/index.css" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.dropdown-submenu a.test').on("click", function(e) {
+            $(this).parent().parent().find('.dropdown-menu').hide();
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+</script>
+<body>
+    <div class="container-fluid">
+        <div id="u0" class="card-header bg-light card">
+            <div id="u0_div" class="card-block"></div>
+        </div>
+        <div id="u1" class="card-body bg-secondary card">
+            <p style="text-align: center">PH-DEMO y BD Versión: 29/12/2017 (En Construcción)</p>
+        </div>
+        <div id="u2" class="card-footer bg-light card">
+            <div id="u2_div" class="card-block"></div>
+        </div>
+        <div id="u3" class="dropdown">
+            <button class="btn-sm btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">INICIO</button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                    <a class="test dropdown-item" tabindex="-1" href="#"> GESTIÓN DE DISPOSITIVOS </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarTratamiento.do"> Gestión de Tratamientos </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarPrograma.do"> Gestión de Programas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarFase.do"> Gestión de Fases</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarGrupo.do"> Gestión de Grupos</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarMotivo.do"> Gestión de Motivos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a class="test dropdown-item" tabindex="-1" href="#"> PERSONAS / RECORRIDOS </a>
+                    <ul class="dropdown-menu ">
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="InsertarPersona2.do">Insertar Persona</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarPersona.do">Mostrar Personas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarUnaPersona.do">Mostrar una Persona</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="ConsultarRecorrido.do">Consultar Recorridos Por Persona </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="ConsultarRecorrido2.do">Consultar Recorridos Por Motivo </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="InsertarPersonaRecorrido.do">Ingresar Persona Recorrido</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="CambiarRecorridoPersona.do">Cambiar Recorrido Persona</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarRecorrido.do">Mostrar Recorridos</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarUnRecorrido.do">Mostrar un Recorrido </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a class="test dropdown-item" tabindex="-1" href="#"> otrasWebsNoClasificadasAun </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarMenuAgrupacion.do">Menú Gestión Agrupaciones</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarTratamientoPrograma.do">Mostrar TratamientoPrograma</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="RelacionarTratamientoPrograma.do">Relacionar Programas Con Un Tratamiento</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarProgramaFase.do">Mostrar ProgramaFase</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="RelacionarProgramaFase.do">Relacionar Fases Con Un Programa</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="MostrarFaseGrupo.do">Mostrar FaseGrupo</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" tabindex="-1" href="RelacionarFaseGrupo.do">Relacionar Grupos Con Una Fase</a>
+                        </li>
+                        <!--                         <li> -->
+                        <!--                             <a class="dropdown-item" tabindex="-1" href="test.jsp">Prueba de select con AJAX</a> -->
+                        <!--                         </li> -->
+                        <!--                         <li> -->
+                        <!--                             <a class="dropdown-item" tabindex="-1" href="test2.jsp">Prueba de select con AJAX2 :)</a> -->
+                        <!--                         </li> -->
+                        <!--                         <li> -->
+                        <!--                             <a class="dropdown-item" tabindex="-1" href="test4.jsp">Prueba de select con AJAX4</a> -->
+                        <!--                         </li> -->
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="u4" class="card-header bg-light card">
+            <div id="u0_div" class="card-block">
+                <a href="manual_ph-demo.pdf">Manual PH-DEMO</a>
+                <a href="https://youtu.be/-4qMzOUivLo">ScreenCast1 Youtube</a>
+                <a href="https://youtu.be/eafuALbcVz4">ScreenCast2 Youtube</a>
+            </div>
+        </div>
+        <div id="u5" class="card-fotter bg-light card" style="display: flex; justify-content: flex-end; align-items: flex-end; height: 350px; border: solid 1px DeepSkyBlue;">
+            <div id="u5_div" class="card-block">
+                Aníbal Álvarez Á.
+                <br />
+                Webmaster
+            </div>
+        </div>
+    </div>
+</body>
+</html>

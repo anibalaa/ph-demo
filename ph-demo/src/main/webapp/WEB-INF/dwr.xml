@@ -1,0 +1,50 @@
+<!DOCTYPE dwr>
+<!-- PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" 
+	"http://getahead.org/dwr/dwr30.dtd">
+ --> 
+<dwr>
+    <allow>
+        <create creator="new" javascript="JsBikeBean">
+            <param name="class" value="com.ph3.tmp.BikeBean" />
+        </create>
+        <create creator="new" javascript="JsModeloBean">
+            <param name="class" value="com.ph3.tmp.ModeloBean" />
+        </create>
+        <create creator="new" javascript="JsPersonaBean">
+            <param name="class" value="com.ph3.bean.PersonaBean" />
+        </create>
+        <create creator="new" javascript="JsNombrePersonaBean">
+            <param name="class" value="com.ph3.bean.NombrePersonaBean" />
+        </create>
+        <create creator="new" javascript="JsApellido1PersonaBean">
+            <param name="class" value="com.ph3.bean.Apellido1PersonaBean" />
+        </create>
+        <create creator="new" javascript="JsApellido2PersonaBean">
+            <param name="class" value="com.ph3.bean.Apellido2PersonaBean" />
+        </create>
+        <create creator="new" javascript="JsTratamientoBean">
+            <param name="class" value="com.ph3.bean.TratamientoBean" />
+        </create>
+        <create creator="new" javascript="JsProgramaBean">
+            <param name="class" value="com.ph3.bean.ProgramaBean" />
+        </create>
+        <create creator="new" javascript="JsFaseBean">
+            <param name="class" value="com.ph3.bean.FaseBean" />
+        </create>
+        <create creator="new" javascript="JsGrupoBean">
+            <param name="class" value="com.ph3.bean.GrupoBean" />
+        </create>
+        <create creator="new" javascript="JsTratamientoProgramaBean">
+            <param name="class" value="com.ph3.bean.TratamientoProgramaBean" />
+        </create>
+        <create creator="new" javascript="JsProgramaFaseBean">
+            <param name="class" value="com.ph3.bean.ProgramaFaseBean" />
+        </create>
+        <create creator="new" javascript="JsFaseGrupoBean">
+            <param name="class" value="com.ph3.bean.FaseGrupoBean" />
+        </create>
+        <create creator="new" javascript="JsMotivoBean">
+            <param name="class" value="com.ph3.bean.MotivoBean" />
+        </create>
+    </allow>
+</dwr>

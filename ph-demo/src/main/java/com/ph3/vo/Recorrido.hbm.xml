@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-may-2017 16:53:13 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+ <class name="com.ph3.vo.Recorrido" table="Recorrido" catalog="ph3" optimistic-lock="version">
+  <id name="idRecorrido" type="java.lang.Integer">
+   <column name="idRecorrido" />
+   <generator class="identity" />
+  </id>
+  <many-to-one name="fase" class="com.ph3.vo.Fase" fetch="select">
+   <column name="idFase" />
+  </many-to-one>
+  <many-to-one name="grupo" class="com.ph3.vo.Grupo" fetch="select">
+   <column name="idGrupo" />
+  </many-to-one>
+  <many-to-one name="motivo" class="com.ph3.vo.Motivo" fetch="select">
+   <column name="idMotivo" />
+  </many-to-one>
+  <many-to-one name="persona" class="com.ph3.vo.Persona" fetch="select">
+   <column name="idPersona" />
+  </many-to-one>
+  <many-to-one name="programa" class="com.ph3.vo.Programa" fetch="select">
+   <column name="idPrograma" />
+  </many-to-one>
+  <many-to-one name="tratamiento" class="com.ph3.vo.Tratamiento" fetch="select">
+   <column name="idTratamiento" />
+  </many-to-one>
+  <property name="fechaInicio" type="date">
+   <column name="fechaInicio" length="10" />
+  </property>
+  <property name="fechaFin" type="date">
+   <column name="fechaFin" length="10" />
+  </property>
+  <property name="activo" type="string">
+   <column name="activo" length="1" />
+  </property>
+ </class>
+</hibernate-mapping>

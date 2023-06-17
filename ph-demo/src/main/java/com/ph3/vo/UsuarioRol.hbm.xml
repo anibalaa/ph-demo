@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-may-2017 16:53:13 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class
+        name="com.ph3.vo.UsuarioRol"
+        table="UsuarioRol"
+        catalog="ph3"
+        optimistic-lock="version">
+        <id
+            name="idUsuarioRol"
+            type="java.lang.Integer">
+            <column name="idUsuarioRol" />
+            <generator class="identity" />
+        </id>
+        <many-to-one
+            name="rol"
+            class="com.ph3.vo.Rol"
+            fetch="select">
+            <column name="idRol" />
+        </many-to-one>
+        <many-to-one
+            name="usuario"
+            class="com.ph3.vo.Usuario"
+            fetch="select">
+            <column name="idUsuario" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

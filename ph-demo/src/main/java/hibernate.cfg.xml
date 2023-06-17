@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">temporal</property>
+         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ph3?useSSL=false</property> 
+<!--        <property name="hibernate.connection.url">jdbc:mysql://10.100.18.93:3306/ph3?useSSL=false</property> -->
+        <property name="hibernate.connection.username">jelastic</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <property name="hibernate.jdbc.use_get_generated_keys">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+  <!-- mostrar/ comentar consultas sql -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+  <!-- dejar de mostrar consultas sql -->
+        <mapping resource="com/ph3/vo/Agrupacion.hbm.xml" />
+        <mapping resource="com/ph3/vo/RolPersona.hbm.xml" />
+        <mapping resource="com/ph3/vo/Persona.hbm.xml" />
+        <mapping resource="com/ph3/vo/Fase.hbm.xml" />
+        <mapping resource="com/ph3/vo/TratamientoPrograma.hbm.xml" />
+        <mapping resource="com/ph3/vo/UsuarioRol.hbm.xml" />
+        <mapping resource="com/ph3/vo/FaseGrupo.hbm.xml" />
+        <mapping resource="com/ph3/vo/ProgramaFase.hbm.xml" />
+        <mapping resource="com/ph3/vo/Recorrido.hbm.xml" />
+        <mapping resource="com/ph3/vo/Programa.hbm.xml" />
+        <mapping resource="com/ph3/vo/Usuario.hbm.xml" />
+        <mapping resource="com/ph3/vo/Grupo.hbm.xml" />
+        <mapping resource="com/ph3/vo/Tratamiento.hbm.xml" />
+        <mapping resource="com/ph3/vo/Rol.hbm.xml" />
+        <mapping resource="com/ph3/vo/Motivo.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

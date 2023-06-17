@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-may-2017 16:53:13 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class
+        name="com.ph3.vo.Agrupacion"
+        optimistic-lock="version">
+        <id
+            name="idAgrupacion"
+            type="java.lang.Integer">
+        </id>
+    </class>
+</hibernate-mapping>

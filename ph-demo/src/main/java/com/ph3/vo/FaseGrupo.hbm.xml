@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-may-2017 16:53:13 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class
+        name="com.ph3.vo.FaseGrupo"
+        table="FaseGrupo"
+        catalog="ph3"
+        optimistic-lock="version">
+        <id
+            name="idFaseGrupo"
+            type="java.lang.Integer">
+            <column name="idFaseGrupo" />
+            <generator class="identity" />
+        </id>
+        <many-to-one
+            name="fase"
+            class="com.ph3.vo.Fase"
+            fetch="select">
+            <column name="idFase" />
+        </many-to-one>
+        <many-to-one
+            name="grupo"
+            class="com.ph3.vo.Grupo"
+            fetch="select">
+            <column name="idGrupo" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
