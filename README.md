@@ -1,6 +1,6 @@
 # PH-DEMO
-PH-Demo es una aplicación dinámica en Java, Javascript, HTML, CSS, JPSs, lenguaje EL, AJax con la librería DWR y que sirve para gestionar los pacientes de una ONG
-llamada Proyecto Hombre.
+PH-Demo es una aplicación dinámica en Java, Javascript, HTML, CSS, JPSs, lenguaje EL, AJax con la librería DWR y se ideó para gestionar los pacientes de una ONG
+llamada Proyecto Hombre Asturias en 2018
 
 La base de datos está en mysql 5.7 y los archivos de base de datos y usuarios están en código fuente para facilitar la importación.
 
